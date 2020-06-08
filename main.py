@@ -64,7 +64,11 @@ async def commands(ctx):
     embed = discord.Embed(
         title=str(ctx.guild.name),
         description='kBot Help Menu!',
-        coluor=discord.Colour.green()
+        colour=discord.Colour.green()
+    )
+
+    embed.set_thumbnail(
+        url=ctx.guild.icon_url
     )
 
     embed.add_field(
@@ -139,12 +143,12 @@ async def rules(ctx):
 
 @client.command()
 async def suggest(ctx, *, suggestion=None):
-    suggchan = client.get_channel()
+    suggchan = client.get_channel(716727371188666482)
 
     embed = discord.Embed(
         title='Suggestion!',
         description=suggestion,
-        colour=discord.Colour.blue()
+        colour=discord.Colour.blue(),
     )
 
     embed.set_footer(
