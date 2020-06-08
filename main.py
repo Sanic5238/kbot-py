@@ -139,7 +139,7 @@ async def rules(ctx):
 
 @client.command()
 async def suggest(ctx, *, suggestion=None):
-    suggchan = client.get_channel(716727371188666482)
+    suggchan = client.get_channel()
 
     embed = discord.Embed(
         title='Suggestion!',
